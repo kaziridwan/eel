@@ -3,5 +3,8 @@ const { Command } = require('commander');
 const program = new Command();
 program.version('0.0.1');
 
-console.log('kemon asos @saddat @mash!')
+const programArgs = program.args
+
 program.parse(process.argv);
+
+console.log('program args',{programArgs, other: process.argv})
