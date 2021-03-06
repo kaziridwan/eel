@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "To initialize TL please append the following line" 
+echo "in your .bashrc or .zshrc file, and reload:"  
+echo "alias tl='"$(pwd)"/index.sh'"
+echo "export TL_ROOT='"$(pwd)"'"

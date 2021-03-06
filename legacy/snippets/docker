@@ -1,0 +1,39 @@
+the smallest docker-compose.yml and Dockerfile template
+   1. Dockerfile
+      ```
+        # for the most i use node-alpine
+        # you can use alpine:3.13
+        # or latest, just dont use the latest tag
+        # popular commands include :
+        # FROM alpine:3.13
+        # WORKDIR /build
+        # RUN mkdir -p /app
+        # RUN npm ci
+        # USER node
+        # COPY --from=build --chown=node:node /build .
+        # CMD ["node", "index.js"]
+        FROM node:12-alpine3.10
+        WORKDIR /app
+      ```
+   2. docker-compose.yml
+      ```
+      services:
+        service_name:
+          build:
+            context: ./service_directory
+          command: ["sh", "-c", "npm install && npm run dev"]
+          ports:
+            - "3130:3000"
+          env_file: .env
+          tty: true
+          depends_on:
+            - backend
+          volumes:
+            - ./frontend:/app
+      ```
+   3. common workflow
+      1. docker-compose up
+      2. docker-compose exec service_name sh
+      3. docker-compose logs -f --tail=100 service_name
+      4. docker system prune -f --volumes
+      5. docker volume prune -f
