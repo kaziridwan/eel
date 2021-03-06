@@ -1,10 +1,16 @@
 {
-  "name": "eel",
-  "version": "0.1.0",
+  "name": "teel",
+  "version": "0.1.5",
   "description": "a cli tool for easy cli tool creation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rel": "npm version patch && npm publish",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "git-update": "git add . --all && git commit -m 'updated' && git push origin"
+  },
+  "bin": {
+    "teel": "index.js"
   },
   "author": "@kazi",
   "license": "MIT",
