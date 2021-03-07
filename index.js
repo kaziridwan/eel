@@ -12,7 +12,9 @@ const xct = (command) => {
           console.log(`stderr: ${stderr}`);
           return;
       }
-      console.log(`stdout: ${stdout}`);
+      console.log(`=====================`);
+      console.log(``);
+      console.log(`${stdout}`);
   });
 }
 
