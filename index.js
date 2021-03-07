@@ -34,11 +34,11 @@ const contextArgs = programArgs.reduce((argsString, argItem, index) => {
 });
 
 if(programArgs.length === 2){
-  console.log('running', `./teel/index`)
+  console.log('running', `./.teel/index`)
   // console.log('program args',{programArgs, other: process.argv})
-  xct(`./teel/index`);
+  xct(`./.teel/index`);
 } else {
-  console.log('running', `./teel/${process.argv[2]} ${contextArgs}`)
+  console.log('running', `./.teel/${process.argv[2]} ${contextArgs}`)
   // console.log('program args',{programArgs, other: process.argv})
-  xct(`./teel/${process.argv[2]} ${contextArgs}`);
+  xct(`./.teel/${process.argv[2]} ${contextArgs}`);
 }
