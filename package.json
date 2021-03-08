@@ -10,7 +10,7 @@
     "git-update": "git add . --all && git commit -m 'updated' && git push origin"
   },
   "bin": {
-    "teel": "index.js"
+    "teel": "index.sh"
   },
   "author": "@kazi",
   "license": "MIT",
