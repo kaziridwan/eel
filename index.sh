@@ -1,7 +1,7 @@
 #!/bin/bash
 # https://devhints.io/bash
-if [[ -z $2 ]]; then
+if [[ -z $1 ]]; then
   ./.teel/index.sh
-elif [[ -n $2 ]]; then
-  ./.teel/$2 "${@:3}"
+elif [[ -n $1 ]]; then
+  ./.teel/$1 "${@:2}"
 fi
