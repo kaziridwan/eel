@@ -1,5 +1,7 @@
 #!/bin/bash
 # https://devhints.io/bash
+echo "teel is running ${@:2}"
+
 if [[ -z $1 ]]; then
   ./.teel/index.sh
 elif [[ -n $1 ]]; then
