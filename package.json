@@ -1,6 +1,6 @@
 {
   "name": "teel",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "a cli tool for easy cli tool creation",
   "main": "index.js",
   "scripts": {
