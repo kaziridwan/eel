@@ -1,6 +1,6 @@
 #!/bin/bash
 # https://devhints.io/bash
-echo "teel is running ${@:2}"
+echo "teel is running $0 $1 $2"
 
 if [[ -z $1 ]]; then
   ./.teel/index.sh
