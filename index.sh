@@ -1,5 +1,11 @@
 #!/bin/bash
 # https://devhints.io/bash
+
+# copy file to the server
+# scp file.txt remote_username@10.10.0.2:/remote/directory
+# paste a file from the server on the local machine
+# scp remote_username@10.10.0.2:/remote/file.txt /local/directory
+
 echo "teel is running $0 $1 $2"
 
 if [[ -z $1 ]]; then
