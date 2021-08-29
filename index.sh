@@ -10,6 +10,10 @@ echo "teel is running $0 $1 $2"
 
 if [[ -z $1 ]]; then
   ./.teel/index.sh
+elif [[ $1 == "install" && -z $2 ]]; then
+  npm i teel -g
+elif [[ $1 == "update" && -z $2 ]]; then
+  npm i teel@latest -g
 elif [[ $1 == "init" && -z $2 ]]; then
   mkdir .teel
   cd .teel
