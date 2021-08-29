@@ -21,6 +21,8 @@ elif [[ $1 == "init" && -z $2 ]]; then
   echo "# scp file.txt remote_username@10.10.0.2:/remote/directory" >> help.sh
   echo "# paste a file from the server on the local machine" >> help.sh
   echo "# scp remote_username@10.10.0.2:/remote/file.txt /local/directory" >> help.sh
+  touch .gitignore
+  echo ".secrets/*" >> .gitignore
   mkdir .secrets
   chmod u+x ./.teel/*
   chmod 600 ./.teel/.secrets/*  
