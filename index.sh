@@ -24,6 +24,7 @@ elif [[ $1 == "init" && -z $2 ]]; then
   touch .gitignore
   echo ".secrets/*" >> .gitignore
   mkdir .secrets
+  cd ..
   chmod u+x ./.teel/*
   chmod 600 ./.teel/.secrets/*  
 elif [[ $1 == "dr" && -z $2 ]]; then
