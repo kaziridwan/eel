@@ -30,7 +30,11 @@ elif [[ $1 == "init" && -z $2 ]]; then
   mkdir .secrets
   cd ..
   chmod u+x ./.teel/*
-  chmod 600 ./.teel/.secrets/*  
+  chmod 600 ./.teel/.secrets/*
+elif [[ $1 == "cs" && -z $2 ]]; then
+  touch ./.teel/$2.sh
+  echo "#!/bin/bash" >> ./.teel/$2.sh
+  echo "file created $2.sh"
 elif [[ $1 == "dr" && -z $2 ]]; then
   chmod u+x ./.teel/*
   chmod 600 ./.teel/.secrets/*
