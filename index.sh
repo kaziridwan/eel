@@ -39,6 +39,8 @@ elif [[ $1 == "dr" && -z $2 ]]; then
   chmod u+x ./.teel/*
   chmod 600 ./.teel/.secrets/*
   chmod u+x ./.teel/.secrets/config.sh*
+elif [[ $1 == "dr" && -n $2 ]]; then
+  chmod u+x $2
 elif [[ -n $1 ]]; then
   ./.teel/$1.sh "${@:2}"
 fi
