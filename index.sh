@@ -16,6 +16,8 @@ elif [[ $1 == "update" && -z $2 ]]; then
   npm i teel@latest -g
 elif [[ $1 == "init" && -z $2 ]]; then
   mkdir .teel
+  mkdir .teel/.secrets
+  touch .teel/.secrets/config.sh
   cd .teel
   touch help.sh
   echo "#!/bin/bash" >> help.sh
