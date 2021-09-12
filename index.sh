@@ -31,7 +31,7 @@ elif [[ $1 == "init" && -z $2 ]]; then
   cd ..
   chmod u+x ./.teel/*
   chmod 600 ./.teel/.secrets/*
-elif [[ $1 == "cs" && -z $2 ]]; then
+elif [[ $1 == "cs" ]]; then
   touch ./.teel/$2.sh
   echo "#!/bin/bash" >> ./.teel/$2.sh
   echo "file created $2.sh"
